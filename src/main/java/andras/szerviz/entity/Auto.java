@@ -7,11 +7,13 @@ package andras.szerviz.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import org.hibernate.validator.Size;
 
 /**
  *
@@ -24,21 +26,36 @@ public class Auto implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(length = 7, nullable = false, unique = true)
+    @Size(max = 7)
     private String rendszam;
     
+    @Column(length = 25, nullable = false)
+    @Size(max = 15)
     private String marka;
     
+    @Column(length = 25, nullable = false)
+    @Size(max = 25)
     private String tipus;
     
+    @Column(length = 15, nullable = false)
+    @Size(max = 15)
     private String motorszam;
     
+    @Column(length = 25, nullable = false, unique = true)
+    @Size(max = 25)
     private String alvazszam;
     
+    @Column(length = 10, nullable = false)
+    @Size(max = 10)
     private String uzemanyag;
     
+    @Column(length = 6, nullable = false)
     private int kmOraAllas;
     
+    @Column(length = 4, nullable = false)
     private int ccm;
+    
     
     private Date garanciaLejarat;
     

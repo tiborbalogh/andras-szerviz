@@ -6,50 +6,38 @@
 package andras.szerviz.entity;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import org.hibernate.validator.NotEmpty;
-import org.hibernate.validator.Size;
-
-
 
 /**
  *
  * @author Andras
  */
 @Entity
-public class Ugyfel implements Serializable {
+public class Dolgozo implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     @Column(length = 45, nullable = false)
-    @Size(max = 45)
-    @NotEmpty
     private String nev;
-
-    @Column(length = 60, unique = true, nullable = false)
-    @Size(max = 60)
-    private String cim;
-
-    @Column(length = 25, unique = true, nullable = false)
-    @Size(max = 25)
-    private String telefon;
     
-    @Column(length = 25, unique = true)
-    @Size(max = 25)
-    private String email;
+    @Column(length = 15, nullable = false)
+    private String jelszo;
     
-    @OneToMany(mappedBy = "ugyfel")
-    private Collection<Auto> autok;
+    @Column(length = 20)
+    private String jogkor; 
     
+    private boolean torolhetoe;
 
+    
+    
+    
+    
     public Long getId() {
         return id;
     }
@@ -57,7 +45,7 @@ public class Ugyfel implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-
+    
     public String getNev() {
         return nev;
     }
@@ -66,37 +54,31 @@ public class Ugyfel implements Serializable {
         this.nev = nev;
     }
 
-    public String getCim() {
-        return cim;
+    public String getJelszo() {
+        return jelszo;
     }
 
-    public void setCim(String cim) {
-        this.cim = cim;
+    public void setJelszo(String jelszo) {
+        this.jelszo = jelszo;
     }
 
-    public String getTelefon() {
-        return telefon;
+    public String getJogkor() {
+        return jogkor;
     }
 
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
+    public void setJogkor(String jogkor) {
+        this.jogkor = jogkor;
     }
 
-    public String getEmail() {
-        return email;
+    public boolean isTorolhetoe() {
+        return torolhetoe;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTorolhetoe(boolean torolhetoe) {
+        this.torolhetoe = torolhetoe;
     }
-
-    public Collection<Auto> getAutok() {
-        return autok;
-    }
-
-    public void setAutok(Collection<Auto> autok) {
-        this.autok = autok;
-    }
+    
+   
 
     @Override
     public int hashCode() {
@@ -108,10 +90,10 @@ public class Ugyfel implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Ugyfel)) {
+        if (!(object instanceof Dolgozo)) {
             return false;
         }
-        Ugyfel other = (Ugyfel) object;
+        Dolgozo other = (Dolgozo) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -120,7 +102,7 @@ public class Ugyfel implements Serializable {
 
     @Override
     public String toString() {
-        return "andras.szerviz.entity.Ugyfel[ id=" + id + " ]";
+        return "andras.szerviz.entity.Dolgozo[ id=" + id + " ]";
     }
     
 }

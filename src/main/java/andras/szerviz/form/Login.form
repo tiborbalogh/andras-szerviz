@@ -48,7 +48,7 @@
                               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                               <Component id="jButton1" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="lbMessage" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
+                          <Component id="lbMessage" alignment="1" min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -84,9 +84,9 @@
                   <Component id="btLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="57" max="32767" attributes="0"/>
               <Component id="lbMessage" min="-2" pref="24" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -129,6 +129,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbMessage">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>

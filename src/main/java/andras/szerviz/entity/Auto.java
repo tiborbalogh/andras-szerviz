@@ -32,9 +32,10 @@ public class Auto implements Serializable {
     @Size(max = 7)
     private String rendszam;
     
-    @Column(length = 25, nullable = false)
-    @Size(max = 15)
-    private String marka;
+    // @Column(length = 25, nullable = false)
+    // @Size(max = 15)
+    @ManyToOne
+    private Marka marka;
     
     @Column(length = 25, nullable = false)
     @Size(max = 25)
@@ -57,7 +58,6 @@ public class Auto implements Serializable {
     
     @Column(length = 4, nullable = false)
     private int ccm;
-    
     
     private Date garanciaLejarat;
     
@@ -83,11 +83,11 @@ public class Auto implements Serializable {
         this.rendszam = rendszam;
     }
 
-    public String getMarka() {
+    public Marka getMarka() {
         return marka;
     }
 
-    public void setMarka(String marka) {
+    public void setMarka(Marka marka) {
         this.marka = marka;
     }
 

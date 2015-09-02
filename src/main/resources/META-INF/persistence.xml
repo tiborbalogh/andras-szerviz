@@ -7,6 +7,7 @@
     <class>andras.szerviz.entity.Dolgozo</class>
     <class>andras.szerviz.entity.Munka</class>
     <class>andras.szerviz.entity.MunkaLOG</class>
+    <class>andras.szerviz.entity.Marka</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/szerviz"/>
       <property name="javax.persistence.jdbc.password" value="postgres"/>

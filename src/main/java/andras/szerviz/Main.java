@@ -31,7 +31,7 @@ public class Main {
            Auto auto = new Auto();
            auto.setRendszam("ABC-422");
            auto.setCcm(1900);
-           auto.setMarka("Audi");
+           // auto.setMarka("Audi");
            auto.setUgyfel(ugyfel);
            
            em.persist(ugyfel);

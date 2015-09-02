@@ -6,6 +6,7 @@
 package andras.szerviz.entity;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import org.hibernate.validator.Size;
 
 /**
@@ -58,6 +60,9 @@ public class Auto implements Serializable {
     
     
     private Date garanciaLejarat;
+    
+    @OneToMany(mappedBy = "auto")
+    private Collection<Munka> munkak;
     
     @ManyToOne
     private Ugyfel ugyfel;
@@ -148,6 +153,14 @@ public class Auto implements Serializable {
 
     public void setUgyfel(Ugyfel ugyfel) {
         this.ugyfel = ugyfel;
+    }
+
+    public Collection<Munka> getMunkak() {
+        return munkak;
+    }
+
+    public void setMunkak(Collection<Munka> munkak) {
+        this.munkak = munkak;
     }
 
     

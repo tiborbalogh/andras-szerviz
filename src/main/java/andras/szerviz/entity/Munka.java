@@ -50,7 +50,7 @@ public class Munka implements Serializable {
     @ManyToOne
     private Ugyfel ugyfel;
     
-    @OneToOne
+    @ManyToOne
     private Auto auto;
     
     

@@ -28,7 +28,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="lbPic" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="59" max="32767" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                       <Component id="lbLogin" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -51,7 +51,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="24" max="32767" attributes="0"/>
+              <EmptySpace min="24" pref="35" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,7 +59,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="lbPic" min="-2" pref="135" max="-2" attributes="0"/>
                   <Component id="lbLogin" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -80,7 +80,7 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lbMessage" min="-2" pref="24" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="36" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

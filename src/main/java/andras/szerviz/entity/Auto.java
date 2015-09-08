@@ -53,13 +53,9 @@ public class Auto implements Serializable {
     @Size(max = 10)
     private String uzemanyag;
     
-    @Column(length = 6, nullable = false)
-    private int kmOraAllas;
-    
     @Column(length = 4, nullable = false)
     private int ccm;
     
-    private Date garanciaLejarat;
     
     @OneToMany(mappedBy = "auto")
     private Collection<Munka> munkak;
@@ -123,14 +119,6 @@ public class Auto implements Serializable {
         this.uzemanyag = uzemanyag;
     }
 
-    public int getKmOraAllas() {
-        return kmOraAllas;
-    }
-
-    public void setKmOraAllas(int kmOraAllas) {
-        this.kmOraAllas = kmOraAllas;
-    }
-
     public int getCcm() {
         return ccm;
     }
@@ -139,13 +127,6 @@ public class Auto implements Serializable {
         this.ccm = ccm;
     }
 
-    public Date getGaranciaLejarat() {
-        return garanciaLejarat;
-    }
-
-    public void setGaranciaLejarat(Date garanciaLejarat) {
-        this.garanciaLejarat = garanciaLejarat;
-    }
 
     public Ugyfel getUgyfel() {
         return ugyfel;

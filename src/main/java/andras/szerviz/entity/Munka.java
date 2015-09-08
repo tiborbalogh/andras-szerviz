@@ -37,12 +37,16 @@ public class Munka implements Serializable {
     @Size(max = 250)
     private String hibaleiras;
     
+    @Column(length = 6, nullable = false)
+    private int kmOraAllas;
+    
     
     private boolean munkaGarancia;
     
     @Column(length = 30, nullable = false)
     private String status;
 
+    private Date garanciaLejarat;
     
     @ManyToOne
     private Dolgozo dolgozo;
@@ -95,8 +99,22 @@ public class Munka implements Serializable {
         this.status = status;
     }
     
-    
+    public int getKmOraAllas() {
+        return kmOraAllas;
+    }
 
+    public void setKmOraAllas(int kmOraAllas) {
+        this.kmOraAllas = kmOraAllas;
+    }
+
+    public Date getGaranciaLejarat() {
+        return garanciaLejarat;
+    }
+
+    public void setGaranciaLejarat(Date garanciaLejarat) {
+        this.garanciaLejarat = garanciaLejarat;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;

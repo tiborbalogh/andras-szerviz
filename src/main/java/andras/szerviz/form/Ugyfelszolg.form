@@ -923,9 +923,6 @@
                   <Image iconType="3" name="/logo_kisebb.png"/>
                 </Property>
               </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
             </Component>
             <Component class="javax.swing.JButton" name="btnFelvisz5">
               <Properties>
